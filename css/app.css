@@ -27,7 +27,15 @@ main .inner #quote {
   font-family: 'Comfortaa', sans-serif;
   font-size: 2.3em;
   line-height: 1.2em;
-  margin-bottom: 1em;
+  color: #252525;
+}
+
+main .inner #author {
+  margin: 0.75em 0 1.5em;
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 1.7em;
+  font-style: italic;
+  color: #888888;
 }
 
 main .inner #generate {
