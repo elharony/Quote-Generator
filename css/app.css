@@ -13,7 +13,7 @@ main {
       -ms-flex-align: center;
           align-items: center;
   height: 100vh;
-  background: #3742fa;
+  background: #00b894;
 }
 
 main .inner {
@@ -43,10 +43,11 @@ main .inner #generate {
   border: 0;
   background: 0;
   font-family: 'Comfortaa', sans-serif;
-  border-bottom: 5px solid #3742fa;
-  border-top: 5px solid #3742fa;
+  border-bottom: 5px solid #00b894;
+  border-top: 5px solid #00b894;
   padding: 1em;
-  color: #3742fa;
+  color: #ffffff;
+  background: #00b894;
   cursor: pointer;
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
@@ -56,10 +57,15 @@ main .inner #generate:focus {
   outline: 0;
 }
 
+main .inner #generate:hover {
+  color: #00b894;
+  background: transparent;
+}
+
 main .inner #generate:before, main .inner #generate:after {
   content: '';
   position: absolute;
-  background: #3742fa;
+  background: #00b894;
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
 }

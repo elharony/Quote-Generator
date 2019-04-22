@@ -1,4 +1,4 @@
-$color-main: #3742fa;
+$color-main: #00b894;
 $color-white: #ffffff;
 $color-text-main: #252525;
 $color-text-sub: #888888;
@@ -43,12 +43,18 @@ main {
             border-bottom: 5px solid $color-main;
             border-top: 5px solid $color-main;
             padding: 1em;
-            color: $color-main;
+            color: $color-white;
+            background: $color-main;
             cursor: pointer;
             transition: all 300ms ease;
 
             &:focus {
                 outline: 0;
+            }
+
+            &:hover {
+                color: $color-main;
+                background: transparent;
             }
 
             &:before, &:after {
