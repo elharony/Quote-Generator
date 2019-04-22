@@ -28,7 +28,7 @@ main {
         }
 
         #author {
-            margin: 0.75em 0 1.5em;
+            margin-top: 1em;
             font-family: 'Comfortaa', sans-serif;
             font-size: 1.7em;
             font-style: italic;
@@ -36,31 +36,27 @@ main {
         }
 
         #generate {
-            position: relative;
+            position: absolute;
             border: 0;
             background: 0;
-            font-family: 'Comfortaa', sans-serif;
-            border-bottom: 5px solid $color-main;
-            border-top: 5px solid $color-main;
+            bottom: 1em;
+            border-bottom: 5px solid $color-white;
+            border-top: 5px solid $color-white;
             padding: 1em;
+            font-family: 'Comfortaa', sans-serif;
             color: $color-white;
-            background: $color-main;
             cursor: pointer;
+            transform: translateX(-50%);
             transition: all 300ms ease;
 
             &:focus {
                 outline: 0;
             }
 
-            &:hover {
-                color: $color-main;
-                background: transparent;
-            }
-
             &:before, &:after {
                 content: '';
                 position: absolute;
-                background: $color-main;
+                background: $color-white;
                 transition: all 300ms ease;
             }
 

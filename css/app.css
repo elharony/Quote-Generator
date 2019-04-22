@@ -31,7 +31,7 @@ main .inner #quote {
 }
 
 main .inner #author {
-  margin: 0.75em 0 1.5em;
+  margin-top: 1em;
   font-family: 'Comfortaa', sans-serif;
   font-size: 1.7em;
   font-style: italic;
@@ -39,16 +39,18 @@ main .inner #author {
 }
 
 main .inner #generate {
-  position: relative;
+  position: absolute;
   border: 0;
   background: 0;
-  font-family: 'Comfortaa', sans-serif;
-  border-bottom: 5px solid #00b894;
-  border-top: 5px solid #00b894;
+  bottom: 1em;
+  border-bottom: 5px solid #ffffff;
+  border-top: 5px solid #ffffff;
   padding: 1em;
+  font-family: 'Comfortaa', sans-serif;
   color: #ffffff;
-  background: #00b894;
   cursor: pointer;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
 }
@@ -57,15 +59,10 @@ main .inner #generate:focus {
   outline: 0;
 }
 
-main .inner #generate:hover {
-  color: #00b894;
-  background: transparent;
-}
-
 main .inner #generate:before, main .inner #generate:after {
   content: '';
   position: absolute;
-  background: #00b894;
+  background: #ffffff;
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
 }
