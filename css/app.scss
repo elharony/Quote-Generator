@@ -1,0 +1,71 @@
+$color-main: #3742fa;
+$color-white: #ffffff;
+
+* {
+    margin: 0;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: $color-main;
+
+    .inner {
+        width: 80%;
+        padding: 2em;
+        background: $color-white;
+        text-align: center;
+
+        #quote {
+            font-family: 'Comfortaa', sans-serif;
+            font-size: 2.3em;
+            line-height: 1.2em;
+            margin-bottom: 1em
+        }
+
+        #generate {
+            position: relative;
+            border: 0;
+            background: 0;
+            font-family: 'Comfortaa', sans-serif;
+            border-bottom: 5px solid $color-main;
+            border-top: 5px solid $color-main;
+            padding: 1em;
+            color: $color-main;
+            cursor: pointer;
+            transition: all 300ms ease;
+
+            &:focus {
+                outline: 0;
+            }
+
+            &:before, &:after {
+                content: '';
+                position: absolute;
+                background: $color-main;
+                transition: all 300ms ease;
+            }
+
+            &:before {
+                top: 0;
+                left: 0;
+                width: 5px;
+                height: 0;
+            }
+
+            &:after {
+                bottom: 0;
+                right: 0;
+                width: 5px;
+                height: 0;
+            }
+
+            &:hover:before, &:hover:after,
+            &:focus:before, &:focus:after {
+                height: 100%;
+            }
+        }
+    }
+}

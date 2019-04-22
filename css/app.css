@@ -1,1 +1,76 @@
-/* No CSS *//*# sourceMappingURL=app.css.map */
+* {
+  margin: 0;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  background: #3742fa;
+}
+
+main .inner {
+  width: 80%;
+  padding: 2em;
+  background: #ffffff;
+  text-align: center;
+}
+
+main .inner #quote {
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 2.3em;
+  line-height: 1.2em;
+  margin-bottom: 1em;
+}
+
+main .inner #generate {
+  position: relative;
+  border: 0;
+  background: 0;
+  font-family: 'Comfortaa', sans-serif;
+  border-bottom: 5px solid #3742fa;
+  border-top: 5px solid #3742fa;
+  padding: 1em;
+  color: #3742fa;
+  cursor: pointer;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+main .inner #generate:focus {
+  outline: 0;
+}
+
+main .inner #generate:before, main .inner #generate:after {
+  content: '';
+  position: absolute;
+  background: #3742fa;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+main .inner #generate:before {
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 0;
+}
+
+main .inner #generate:after {
+  bottom: 0;
+  right: 0;
+  width: 5px;
+  height: 0;
+}
+
+main .inner #generate:hover:before, main .inner #generate:hover:after, main .inner #generate:focus:before, main .inner #generate:focus:after {
+  height: 100%;
+}
+/*# sourceMappingURL=app.css.map */
