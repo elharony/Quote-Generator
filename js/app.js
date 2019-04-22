@@ -1,4 +1,5 @@
 const quoteElem = document.querySelector('#quote')
+const authorElem = document.querySelector('#author')
 const generateBtn = document.querySelector('#generate')
 
 
@@ -11,6 +12,7 @@ getRandomQuote = () => {
   console.log(rand)
   let selectedQuote = quotes[rand]
   quoteElem.innerHTML = selectedQuote.quote
+  authorElem.innerHTML = `- ${selectedQuote.author}`
   console.log(selectedQuote)
 }
 
