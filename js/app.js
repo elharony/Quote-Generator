@@ -1,15 +1,26 @@
 const quoteElem = document.querySelector('#quote')
 const authorElem = document.querySelector('#author')
 const generateBtn = document.querySelector('#generate')
-
+let currentQuoteIndex;
 
 generateBtn.addEventListener('click', () => {
   getRandomQuote()
 })
 
 getRandomQuote = () => {
-  let rand = getRandomInt(0, 27)
+  let rand = getRandomInt(0, 3)
   console.log(rand)
+
+  // If we get the same quote, get another one
+  if(rand === currentQuoteIndex) {
+    console.log("SAME!")
+    return getRandomQuote()
+  }
+
+  // Update current index
+  currentQuoteIndex = rand
+  
+  // Display quote
   let selectedQuote = quotes[rand]
   quoteElem.innerHTML = selectedQuote.quote
   authorElem.innerHTML = `- ${selectedQuote.author}`
