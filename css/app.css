@@ -44,12 +44,12 @@ main .inner #generate {
   position: absolute;
   border: 0;
   background: 0;
-  bottom: 1em;
-  border-bottom: 5px solid #454afd;
-  border-top: 5px solid #454afd;
+  bottom: 2em;
   padding: 1em;
   font-family: 'Comfortaa', sans-serif;
   color: #454afd;
+  -webkit-box-shadow: 0 10px 60px rgba(0, 0, 0, 0.57);
+          box-shadow: 0 10px 60px rgba(0, 0, 0, 0.57);
   cursor: pointer;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -61,29 +61,8 @@ main .inner #generate:focus {
   outline: 0;
 }
 
-main .inner #generate:before, main .inner #generate:after {
-  content: '';
-  position: absolute;
+main .inner #generate:hover, main .inner #generate:focus {
   background: #454afd;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-}
-
-main .inner #generate:before {
-  top: 0;
-  left: 0;
-  width: 5px;
-  height: 0;
-}
-
-main .inner #generate:after {
-  bottom: 0;
-  right: 0;
-  width: 5px;
-  height: 0;
-}
-
-main .inner #generate:hover:before, main .inner #generate:hover:after, main .inner #generate:focus:before, main .inner #generate:focus:after {
-  height: 100%;
+  color: #f7f7ff;
 }
 /*# sourceMappingURL=app.css.map */

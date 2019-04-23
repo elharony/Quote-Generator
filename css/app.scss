@@ -40,12 +40,11 @@ main {
             position: absolute;
             border: 0;
             background: 0;
-            bottom: 1em;
-            border-bottom: 5px solid $color-main;
-            border-top: 5px solid $color-main;
+            bottom: 2em;
             padding: 1em;
             font-family: 'Comfortaa', sans-serif;
             color: $color-main;
+            box-shadow: 0 10px 60px rgba(0, 0, 0, 0.57);
             cursor: pointer;
             transform: translateX(-50%);
             transition: all 300ms ease;
@@ -54,30 +53,9 @@ main {
                 outline: 0;
             }
 
-            &:before, &:after {
-                content: '';
-                position: absolute;
+            &:hover, &:focus {
                 background: $color-main;
-                transition: all 300ms ease;
-            }
-
-            &:before {
-                top: 0;
-                left: 0;
-                width: 5px;
-                height: 0;
-            }
-
-            &:after {
-                bottom: 0;
-                right: 0;
-                width: 5px;
-                height: 0;
-            }
-
-            &:hover:before, &:hover:after,
-            &:focus:before, &:focus:after {
-                height: 100%;
+                color: $color-white;
             }
         }
     }
