@@ -13,14 +13,16 @@ main {
       -ms-flex-align: center;
           align-items: center;
   height: 100vh;
-  background: #00b894;
+  background: #f7f7ff;
 }
 
 main .inner {
   width: 80%;
   padding: 2em;
-  background: #ffffff;
+  background: #f7f7ff;
   text-align: center;
+  -webkit-box-shadow: 0 10px 60px rgba(69, 74, 253, 0.19);
+          box-shadow: 0 10px 60px rgba(69, 74, 253, 0.19);
 }
 
 main .inner #quote {
@@ -43,11 +45,11 @@ main .inner #generate {
   border: 0;
   background: 0;
   bottom: 1em;
-  border-bottom: 5px solid #ffffff;
-  border-top: 5px solid #ffffff;
+  border-bottom: 5px solid #454afd;
+  border-top: 5px solid #454afd;
   padding: 1em;
   font-family: 'Comfortaa', sans-serif;
-  color: #ffffff;
+  color: #454afd;
   cursor: pointer;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -62,7 +64,7 @@ main .inner #generate:focus {
 main .inner #generate:before, main .inner #generate:after {
   content: '';
   position: absolute;
-  background: #ffffff;
+  background: #454afd;
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
 }

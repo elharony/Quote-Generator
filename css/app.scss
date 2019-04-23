@@ -1,5 +1,5 @@
-$color-main: #00b894;
-$color-white: #ffffff;
+$color-main: #454afd;
+$color-white: #f7f7ff;
 $color-text-main: #252525;
 $color-text-sub: #888888;
 
@@ -12,13 +12,14 @@ main {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: $color-main;
+    background: $color-white;
 
     .inner {
         width: 80%;
         padding: 2em;
         background: $color-white;
         text-align: center;
+        box-shadow: 0 10px 60px rgba(69,74,253,.19);
 
         #quote {
             font-family: 'Comfortaa', sans-serif;
@@ -40,11 +41,11 @@ main {
             border: 0;
             background: 0;
             bottom: 1em;
-            border-bottom: 5px solid $color-white;
-            border-top: 5px solid $color-white;
+            border-bottom: 5px solid $color-main;
+            border-top: 5px solid $color-main;
             padding: 1em;
             font-family: 'Comfortaa', sans-serif;
-            color: $color-white;
+            color: $color-main;
             cursor: pointer;
             transform: translateX(-50%);
             transition: all 300ms ease;
@@ -56,7 +57,7 @@ main {
             &:before, &:after {
                 content: '';
                 position: absolute;
-                background: $color-white;
+                background: $color-main;
                 transition: all 300ms ease;
             }
 
