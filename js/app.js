@@ -8,7 +8,7 @@ generateBtn.addEventListener('click', () => {
 })
 
 getRandomQuote = () => {
-  let rand = getRandomInt(0, 26)
+  let rand = getRandomInt(0, 58)
 
   // If we get the same quote, get another one
   if(rand === currentQuoteIndex) {
