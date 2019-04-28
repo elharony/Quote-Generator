@@ -11,28 +11,28 @@ main {
     display: flex;
     position: relative;
     justify-content: center;
-    align-items: center;
+    align-items: baseline;
     height: 95vh;
     background: $color-white;
 
     .inner {
+        font-family: 'Comfortaa', sans-serif;
         width: 80%;
-        padding: 2em;
+        margin-top: 1em;
+        padding: 1em;
         background: $color-white;
         text-align: center;
         box-shadow: 0 10px 60px rgba(69,74,253,.19);
 
         #quote {
-            font-family: 'Comfortaa', sans-serif;
-            font-size: 2.3em;
+            font-size: 1.3em;
             line-height: 1.2em;
             color: $color-text-main;
         }
 
         #author {
+            font-size: 0.7em;
             margin-top: 1em;
-            font-family: 'Comfortaa', sans-serif;
-            font-size: 1.7em;
             font-style: italic;
             color: $color-text-sub;
         }
@@ -45,11 +45,12 @@ main {
             text-align: center;
 
             .generate-btn {
-                margin: 0.5em;
+                margin: 0.25em;
                 border: 0;
                 background: 0;
-                padding: 1em;
+                padding: 0.5em;
                 font-family: 'Comfortaa', sans-serif;
+                font-size: 0.8em;
                 color: $color-main;
                 box-shadow: 0 10px 60px rgba(0, 0, 0, 0.57);
                 cursor: pointer;
@@ -68,6 +69,45 @@ main {
     }
 }
 
+@media (min-width: 550px) {
+    main {
+        .inner {
+            #quote {
+                font-size: 1.5em;
+            }
+            #author {
+                font-size: 0.9em;
+            }
+            .options {
+                .generate-btn {
+                    font-size: 0.9em;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 850px) {
+    main {
+        align-items: center;
+        .inner {
+            #quote {
+                font-size: 1.9em;
+            }
+            #author {
+                font-size: 1.4em;
+            }
+            .options {
+                .generate-btn {
+                    font-size: 0.9em;
+                    margin: 1em;
+                    padding: 0.75em;
+                }
+            }
+        }
+    }
+}
+
 footer {
     display: flex;
     height: 5vh;
@@ -76,7 +116,7 @@ footer {
     background: #f7f7ff91;
     text-align: center;
     font-family: 'Comfortaa', sans-serif;
-    font-size: 0.9em;
+    font-size: 0.7em;
     color: $color-text-main;
 
     a {
@@ -86,5 +126,11 @@ footer {
         &:hover {
             color: $color-main;
         }
+    }
+}
+
+@media (min-width: 550px) {
+    footer {
+        font-size: 0.9em;
     }
 }

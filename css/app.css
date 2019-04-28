@@ -10,16 +10,18 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
   height: 95vh;
   background: #f7f7ff;
 }
 
 main .inner {
+  font-family: 'Comfortaa', sans-serif;
   width: 80%;
-  padding: 2em;
+  margin-top: 1em;
+  padding: 1em;
   background: #f7f7ff;
   text-align: center;
   -webkit-box-shadow: 0 10px 60px rgba(69, 74, 253, 0.19);
@@ -27,16 +29,14 @@ main .inner {
 }
 
 main .inner #quote {
-  font-family: 'Comfortaa', sans-serif;
-  font-size: 2.3em;
+  font-size: 1.3em;
   line-height: 1.2em;
   color: #252525;
 }
 
 main .inner #author {
+  font-size: 0.7em;
   margin-top: 1em;
-  font-family: 'Comfortaa', sans-serif;
-  font-size: 1.7em;
   font-style: italic;
   color: #888888;
 }
@@ -50,11 +50,12 @@ main .inner .options {
 }
 
 main .inner .options .generate-btn {
-  margin: 0.5em;
+  margin: 0.25em;
   border: 0;
   background: 0;
-  padding: 1em;
+  padding: 0.5em;
   font-family: 'Comfortaa', sans-serif;
+  font-size: 0.8em;
   color: #454afd;
   -webkit-box-shadow: 0 10px 60px rgba(0, 0, 0, 0.57);
           box-shadow: 0 10px 60px rgba(0, 0, 0, 0.57);
@@ -72,6 +73,37 @@ main .inner .options .generate-btn:hover, main .inner .options .generate-btn:foc
   color: #f7f7ff;
 }
 
+@media (min-width: 550px) {
+  main .inner #quote {
+    font-size: 1.5em;
+  }
+  main .inner #author {
+    font-size: 0.9em;
+  }
+  main .inner .options .generate-btn {
+    font-size: 0.9em;
+  }
+}
+
+@media (min-width: 850px) {
+  main {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .inner #quote {
+    font-size: 1.9em;
+  }
+  main .inner #author {
+    font-size: 1.4em;
+  }
+  main .inner .options .generate-btn {
+    font-size: 0.9em;
+    margin: 1em;
+    padding: 0.75em;
+  }
+}
+
 footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -86,7 +118,7 @@ footer {
   background: #f7f7ff91;
   text-align: center;
   font-family: 'Comfortaa', sans-serif;
-  font-size: 0.9em;
+  font-size: 0.7em;
   color: #252525;
 }
 
@@ -97,5 +129,11 @@ footer a {
 
 footer a:hover {
   color: #454afd;
+}
+
+@media (min-width: 550px) {
+  footer {
+    font-size: 0.9em;
+  }
 }
 /*# sourceMappingURL=app.css.map */
