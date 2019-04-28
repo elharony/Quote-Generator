@@ -9,9 +9,10 @@ $color-text-sub: #888888;
 
 main {
     display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 95vh;
     background: $color-white;
 
     .inner {
@@ -63,6 +64,27 @@ main {
                     color: $color-white;
                 }
             }
+        }
+    }
+}
+
+footer {
+    display: flex;
+    height: 5vh;
+    justify-content: center;
+    align-items: center;
+    background: #f7f7ff91;
+    text-align: center;
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 0.9em;
+    color: $color-text-main;
+
+    a {
+        margin: 0 5px;
+        color: $color-text-main;
+
+        &:hover {
+            color: $color-main;
         }
     }
 }

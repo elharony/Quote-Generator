@@ -6,13 +6,14 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100vh;
+  height: 95vh;
   background: #f7f7ff;
 }
 
@@ -69,5 +70,32 @@ main .inner .options .generate-btn:focus {
 main .inner .options .generate-btn:hover, main .inner .options .generate-btn:focus {
   background: #454afd;
   color: #f7f7ff;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 5vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #f7f7ff91;
+  text-align: center;
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 0.9em;
+  color: #252525;
+}
+
+footer a {
+  margin: 0 5px;
+  color: #252525;
+}
+
+footer a:hover {
+  color: #454afd;
 }
 /*# sourceMappingURL=app.css.map */
