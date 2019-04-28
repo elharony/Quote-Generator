@@ -5,6 +5,12 @@ let currentQuoteIndex;
 
 // Click Event
 for(let i = 0; i < generateBtns.length; i++) {
+
+  /**
+   * Add `click` event to each `generateBtns`
+   * Invoke the `getRandomQuote`
+   * Pass the `data-value` attribute
+   **/
   generateBtns[i].addEventListener('click', () => {
     getRandomQuote(generateBtns[i].getAttribute('data-value'))
   })
@@ -21,10 +27,17 @@ getRandomQuote = (category) => {
 
   // Get Quotes based on the selected Category
   if(category == 'All') {
-    displayQuotes(rand)
+    displayQuote(rand)
   } else {
+
+    /**
+     * If `category` != 'All',
+     * Do we get the same category randomly?
+     * If so, display that quote
+     * If not, recursive!
+     */
     if(quotes[rand].category == category) {
-      displayQuotes(rand)
+      displayQuote(rand)
     } else {
       return getRandomQuote(category)
     }
@@ -32,12 +45,16 @@ getRandomQuote = (category) => {
 }
 
 
-displayQuotes = (randomQuoteIndex) => {
+displayQuote = (randomQuoteIndex) => {
 
    // Update current index
    currentQuoteIndex = randomQuoteIndex
-      
-   // Display quote
+  
+  /**
+   * Cache the selected quote - `quotes[randomQuoteIndex]`
+   * Display the `quote` text
+   * Display the `author` text
+   */
    let selectedQuote = quotes[randomQuoteIndex]
    quoteElem.innerHTML = selectedQuote.quote
    authorElem.innerHTML = `- ${selectedQuote.author}`
