@@ -8,12 +8,10 @@ generateBtn.addEventListener('click', () => {
 })
 
 getRandomQuote = () => {
-  let rand = getRandomInt(0, 3)
-  console.log(rand)
+  let rand = getRandomInt(0, 26)
 
   // If we get the same quote, get another one
   if(rand === currentQuoteIndex) {
-    console.log("SAME!")
     return getRandomQuote()
   }
 
@@ -24,7 +22,6 @@ getRandomQuote = () => {
   let selectedQuote = quotes[rand]
   quoteElem.innerHTML = selectedQuote.quote
   authorElem.innerHTML = `- ${selectedQuote.author}`
-  console.log(selectedQuote)
 }
 
 // SOF: https://stackoverflow.com/a/1527820/5560399
