@@ -36,26 +36,32 @@ main {
             color: $color-text-sub;
         }
 
-        #generate {
+        .options {
             position: absolute;
-            border: 0;
-            background: 0;
+            width: 100%;
             bottom: 2em;
-            padding: 1em;
-            font-family: 'Comfortaa', sans-serif;
-            color: $color-main;
-            box-shadow: 0 10px 60px rgba(0, 0, 0, 0.57);
-            cursor: pointer;
-            transform: translateX(-50%);
-            transition: all 300ms ease;
+            left: 0;
+            text-align: center;
 
-            &:focus {
-                outline: 0;
-            }
+            .generate-btn {
+                margin: 0.5em;
+                border: 0;
+                background: 0;
+                padding: 1em;
+                font-family: 'Comfortaa', sans-serif;
+                color: $color-main;
+                box-shadow: 0 10px 60px rgba(0, 0, 0, 0.57);
+                cursor: pointer;
+                transition: all 300ms ease;
 
-            &:hover, &:focus {
-                background: $color-main;
-                color: $color-white;
+                &:focus {
+                    outline: 0;
+                }
+
+                &:hover, &:focus {
+                    background: $color-main;
+                    color: $color-white;
+                }
             }
         }
     }
