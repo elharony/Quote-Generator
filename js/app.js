@@ -1,6 +1,7 @@
 const quoteElem = document.querySelector('#quote')
 const authorElem = document.querySelector('#author')
 const generateBtns = document.querySelectorAll('.generate-btn')
+const main = document.querySelector('main')
 let currentQuoteIndex;
 
 // Click Event
@@ -58,6 +59,12 @@ displayQuote = (randomQuoteIndex) => {
    let selectedQuote = quotes[randomQuoteIndex]
    quoteElem.innerHTML = selectedQuote.quote
    authorElem.innerHTML = `- ${selectedQuote.author}`
+
+   /**
+    * Change the background
+    */
+   main.style.background = `#ffffff url(../img/${selectedQuote.category}.jpg) center`
+   main.style.backgroundSize = 'cover'
 }
 
 

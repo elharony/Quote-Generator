@@ -57,6 +57,7 @@ main .inner .options .generate-btn {
   font-family: 'Comfortaa', sans-serif;
   font-size: 0.8em;
   color: #454afd;
+  background: #f7f7ff;
   -webkit-box-shadow: 0 10px 60px rgba(0, 0, 0, 0.57);
           box-shadow: 0 10px 60px rgba(0, 0, 0, 0.57);
   cursor: pointer;
