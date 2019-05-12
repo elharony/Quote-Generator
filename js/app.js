@@ -2,7 +2,43 @@ const quoteElem = document.querySelector('#quote')
 const authorElem = document.querySelector('#author')
 const generateBtns = document.querySelectorAll('.generate-btn')
 const main = document.querySelector('main')
+const quotesContainer = document.querySelector('.quotes')
+const showAll = document.querySelector('#show-all')
 let currentQuoteIndex;
+
+
+/**
+ * `Click` Event Listener
+ * Animate the `quotesContainer` to enter the UI
+ * Display all available `quotes`
+ */
+showAll.addEventListener('click', () => {
+  quotesContainer.classList.add('animate')
+
+  /**
+   * Create `quoteWrapper`, `quoteTitle` and `quoteAuthor` elements
+   * Fill them with associated data
+   * Append both `quoteTitle` and `quoteAuthor` elements inside `quoteInner`
+   * Append everything in each other, and finally append to the `quotesContainer`
+   */
+  for(quote of quotes) {
+    let quoteWrapper = document.createElement('div')
+    quoteWrapper.classList.add('quote')
+    let quoteInner = document.createElement('div')
+    let quoteTitle = document.createElement('h2')
+    let quoteAuthor = document.createElement('p')
+
+    quoteTitle.innerHTML = quote.quote
+    quoteAuthor.innerHTML = `- ${quote.author}`
+
+    quoteInner.appendChild(quoteTitle)
+    quoteInner.appendChild(quoteAuthor)
+
+    quoteWrapper.appendChild(quoteInner)
+    quotesContainer.appendChild(quoteWrapper)
+  }
+})
+
 
 // Click Event
 for(let i = 0; i < generateBtns.length; i++) {
