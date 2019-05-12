@@ -39,6 +39,7 @@ main {
       -ms-flex-align: baseline;
           align-items: baseline;
   height: 95vh;
+  overflow-x: hidden;
   background: #f7f7ff;
 }
 
