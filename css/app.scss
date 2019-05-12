@@ -7,6 +7,29 @@ $color-text-sub: #888888;
     margin: 0;
 }
 
+.btn {
+    margin: 0.25em;
+    border: 0;
+    background: 0;
+    padding: 0.5em;
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 0.8em;
+    color: $color-main;
+    background: $color-white;
+    box-shadow: 0 10px 60px rgba(0, 0, 0, 0.57);
+    cursor: pointer;
+    transition: all 300ms ease;
+
+    &:focus {
+        outline: 0;
+    }
+
+    &:hover, &:focus {
+        background: $color-main;
+        color: $color-white;
+    }
+}
+
 main {
     display: flex;
     position: relative;
@@ -43,29 +66,6 @@ main {
             bottom: 2em;
             left: 0;
             text-align: center;
-
-            .generate-btn {
-                margin: 0.25em;
-                border: 0;
-                background: 0;
-                padding: 0.5em;
-                font-family: 'Comfortaa', sans-serif;
-                font-size: 0.8em;
-                color: $color-main;
-                background: $color-white;
-                box-shadow: 0 10px 60px rgba(0, 0, 0, 0.57);
-                cursor: pointer;
-                transition: all 300ms ease;
-
-                &:focus {
-                    outline: 0;
-                }
-
-                &:hover, &:focus {
-                    background: $color-main;
-                    color: $color-white;
-                }
-            }
         }
     }
 
@@ -113,6 +113,9 @@ main {
 }
 
 @media (min-width: 550px) {
+    .btn {
+        font-size: 0.9em;
+    }
     main {
         .inner {
             #quote {
@@ -120,11 +123,6 @@ main {
             }
             #author {
                 font-size: 0.9em;
-            }
-            .options {
-                .generate-btn {
-                    font-size: 0.9em;
-                }
             }
         }
         .quotes {
@@ -136,6 +134,11 @@ main {
 }
 
 @media (min-width: 850px) {
+    .btn {
+        font-size: 0.9em;
+        margin: 1em;
+        padding: 0.75em;
+    }
     main {
         align-items: center;
         .inner {
@@ -144,13 +147,6 @@ main {
             }
             #author {
                 font-size: 1.4em;
-            }
-            .options {
-                .generate-btn {
-                    font-size: 0.9em;
-                    margin: 1em;
-                    padding: 0.75em;
-                }
             }
         }
         .quotes {

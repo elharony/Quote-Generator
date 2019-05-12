@@ -2,6 +2,31 @@
   margin: 0;
 }
 
+.btn {
+  margin: 0.25em;
+  border: 0;
+  background: 0;
+  padding: 0.5em;
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 0.8em;
+  color: #454afd;
+  background: #f7f7ff;
+  -webkit-box-shadow: 0 10px 60px rgba(0, 0, 0, 0.57);
+          box-shadow: 0 10px 60px rgba(0, 0, 0, 0.57);
+  cursor: pointer;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+.btn:hover, .btn:focus {
+  background: #454afd;
+  color: #f7f7ff;
+}
+
 main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -47,31 +72,6 @@ main .inner .options {
   bottom: 2em;
   left: 0;
   text-align: center;
-}
-
-main .inner .options .generate-btn {
-  margin: 0.25em;
-  border: 0;
-  background: 0;
-  padding: 0.5em;
-  font-family: 'Comfortaa', sans-serif;
-  font-size: 0.8em;
-  color: #454afd;
-  background: #f7f7ff;
-  -webkit-box-shadow: 0 10px 60px rgba(0, 0, 0, 0.57);
-          box-shadow: 0 10px 60px rgba(0, 0, 0, 0.57);
-  cursor: pointer;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-}
-
-main .inner .options .generate-btn:focus {
-  outline: 0;
-}
-
-main .inner .options .generate-btn:hover, main .inner .options .generate-btn:focus {
-  background: #454afd;
-  color: #f7f7ff;
 }
 
 main .quotes {
@@ -131,13 +131,13 @@ main .quotes.animate {
 }
 
 @media (min-width: 550px) {
+  .btn {
+    font-size: 0.9em;
+  }
   main .inner #quote {
     font-size: 1.5em;
   }
   main .inner #author {
-    font-size: 0.9em;
-  }
-  main .inner .options .generate-btn {
     font-size: 0.9em;
   }
   main .quotes .quote {
@@ -146,6 +146,11 @@ main .quotes.animate {
 }
 
 @media (min-width: 850px) {
+  .btn {
+    font-size: 0.9em;
+    margin: 1em;
+    padding: 0.75em;
+  }
   main {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -156,11 +161,6 @@ main .quotes.animate {
   }
   main .inner #author {
     font-size: 1.4em;
-  }
-  main .inner .options .generate-btn {
-    font-size: 0.9em;
-    margin: 1em;
-    padding: 0.75em;
   }
   main .quotes .quote {
     width: calc(94%/3);
