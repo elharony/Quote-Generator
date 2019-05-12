@@ -2,6 +2,7 @@ const quoteElem = document.querySelector('#quote')
 const authorElem = document.querySelector('#author')
 const generateBtns = document.querySelectorAll('.generate-btn')
 const main = document.querySelector('main')
+const quotesWrapper = document.querySelector('.quotes-wrapper')
 const quotesContainer = document.querySelector('.quotes')
 const showAll = document.querySelector('#show-all')
 let currentQuoteIndex;
@@ -13,7 +14,7 @@ let currentQuoteIndex;
  * Display all available `quotes`
  */
 showAll.addEventListener('click', () => {
-  quotesContainer.classList.add('animate')
+  quotesWrapper.classList.add('animate')
 
   /**
    * Create `quoteWrapper`, `quoteTitle` and `quoteAuthor` elements
@@ -38,6 +39,14 @@ showAll.addEventListener('click', () => {
     quotesContainer.appendChild(quoteWrapper)
   }
 })
+
+/**
+ * Hide `all quotes` grid
+ */
+function hideGrid() {
+  quotesWrapper.classList.remove('animate')
+}
+
 
 
 // Click Event
