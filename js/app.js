@@ -30,7 +30,7 @@ showAll.addEventListener('click', () => {
     let quoteAuthor = document.createElement('p')
 
     quoteTitle.innerHTML = quote.quote
-    quoteAuthor.innerHTML = `- ${quote.author}`
+    quoteAuthor.innerHTML = `- ${quote.author} <b>in</b> ${quote.category}`
 
     quoteInner.appendChild(quoteTitle)
     quoteInner.appendChild(quoteAuthor)
