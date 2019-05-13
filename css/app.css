@@ -54,15 +54,15 @@ main .inner {
           box-shadow: 0 10px 60px rgba(69, 74, 253, 0.19);
 }
 
-main .inner #quote {
+main .inner .quote {
   font-size: 1.3em;
   line-height: 1.2em;
   color: #252525;
 }
 
-main .inner #author {
+main .inner .author {
   font-size: 0.7em;
-  margin-top: 1em;
+  margin: 1em 0;
   font-style: italic;
   color: #888888;
 }

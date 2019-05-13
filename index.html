@@ -15,10 +15,19 @@
     
     <main>
         <div class="inner">
-            <h2 id="quote"></h2>
-            <p id="author"></p>
+            <div class="quotes-container"></div>
             <div class="options">
-                <button class="btn generate-btn" data-value="All" title="Random Quote"><i class="fas fa-random fa-fw"></i></button>
+                <button class="btn">
+                    <i class="fas fa-calculator fa-fw"></i>
+                    <select id="quote-counter" onchange="updateCounter()" title="How many quotes?">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </button>
+                <button class="btn generate-btn" data-value="All" title="Random"><i class="fas fa-random fa-fw"></i></button>
                 <button class="btn generate-btn" data-value="Business" title="Business"><i class="fas fa-briefcase fa-fw"></i></button>
                 <button class="btn generate-btn" data-value="Time" title="Time"><i class="fas fa-clock fa-fw"></i></button>
                 <button class="btn generate-btn" data-value="Money" title="Money"><i class="fas fa-dollar-sign fa-fw"></i></button>

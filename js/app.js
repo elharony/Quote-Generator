@@ -2,15 +2,18 @@ const quoteElem = document.querySelector('#quote')
 const authorElem = document.querySelector('#author')
 const generateBtns = document.querySelectorAll('.generate-btn')
 const main = document.querySelector('main')
+const quotesContainer = document.querySelector('.quotes-container')
 const quotesWrapper = document.querySelector('.quotes-wrapper')
-const quotesContainer = document.querySelector('.quotes')
+const quotesGrid = document.querySelector('.quotes')
 const showAll = document.querySelector('#show-all')
+const quoteCounter = document.querySelector('#quote-counter')
 let currentQuoteIndex;
+let currentQuoteCounter = quoteCounter.options[quoteCounter.selectedIndex].value;
 
 
 /**
  * `Click` Event Listener
- * Animate the `quotesContainer` to enter the UI
+ * Animate the `quotesGrid` to enter the UI
  * Display all available `quotes`
  */
 showAll.addEventListener('click', () => {
@@ -20,7 +23,7 @@ showAll.addEventListener('click', () => {
    * Create `quoteWrapper`, `quoteTitle` and `quoteAuthor` elements
    * Fill them with associated data
    * Append both `quoteTitle` and `quoteAuthor` elements inside `quoteInner`
-   * Append everything in each other, and finally append to the `quotesContainer`
+   * Append everything in each other, and finally append to the `quotesGrid`
    */
   for(quote of quotes) {
     let quoteWrapper = document.createElement('div')
@@ -36,7 +39,7 @@ showAll.addEventListener('click', () => {
     quoteInner.appendChild(quoteAuthor)
 
     quoteWrapper.appendChild(quoteInner)
-    quotesContainer.appendChild(quoteWrapper)
+    quotesGrid.appendChild(quoteWrapper)
   }
 })
 
@@ -45,6 +48,13 @@ showAll.addEventListener('click', () => {
  */
 function hideGrid() {
   quotesWrapper.classList.remove('animate')
+}
+
+/**
+ * Update `quote-counter` value
+ */
+function updateCounter() {
+  currentQuoteCounter = quoteCounter.options[quoteCounter.selectedIndex].value
 }
 
 
@@ -58,36 +68,43 @@ for(let i = 0; i < generateBtns.length; i++) {
    * Pass the `data-value` attribute
    **/
   generateBtns[i].addEventListener('click', () => {
-    getRandomQuote(generateBtns[i].getAttribute('data-value'))
+    getRandomQuote(generateBtns[i].getAttribute('data-value'), currentQuoteCounter)
   })
 }
 
 
-getRandomQuote = (category) => {
-  let rand = getRandomInt(0, 58)
+getRandomQuote = (category, howMany) => {
 
-  // If we get the same quote, get another one
-  if(rand === currentQuoteIndex) {
-    return getRandomQuote(category)
-  }
+  // Empty before adding new quotes
+  quotesContainer.innerHTML = ''
 
-  // Get Quotes based on the selected Category
-  if(category == 'All') {
-    displayQuote(rand)
-  } else {
+  for(let i=0; i < howMany; i++) {
+    let rand = getRandomInt(0, 58)
 
-    /**
-     * If `category` != 'All',
-     * Do we get the same category randomly?
-     * If so, display that quote
-     * If not, recursive!
-     */
-    if(quotes[rand].category == category) {
+    // If we get the same quote, get another one
+    if(rand === currentQuoteIndex) {
+      return getRandomQuote(category, currentQuoteCounter)
+    }
+
+    // Get Quotes based on the selected Category
+    if(category == 'All') {
       displayQuote(rand)
     } else {
-      return getRandomQuote(category)
+
+      /**
+       * If `category` != 'All',
+       * Do we get the same category randomly?
+       * If so, display that quote
+       * If not, recursive!
+       */
+      if(quotes[rand].category == category) {
+        displayQuote(rand)
+      } else {
+        return getRandomQuote(category, currentQuoteCounter)
+      }
     }
   }
+
 }
 
 
@@ -102,8 +119,15 @@ displayQuote = (randomQuoteIndex) => {
    * Display the `author` text
    */
    let selectedQuote = quotes[randomQuoteIndex]
+   let quoteElem = document.createElement('h2')
+   quoteElem.classList.add('quote')
+   let authorElem = document.createElement('p')
+   authorElem.classList.add('author')
    quoteElem.innerHTML = selectedQuote.quote
    authorElem.innerHTML = `- ${selectedQuote.author}`
+
+   quotesContainer.appendChild(quoteElem)
+   quotesContainer.appendChild(authorElem)
 
    /**
     * Change the background
@@ -123,5 +147,5 @@ function getRandomInt(min, max) {
 
 // Startup Quote
 (function init() {
-  getRandomQuote('All')
+  getRandomQuote('All', currentQuoteCounter)
 })()
