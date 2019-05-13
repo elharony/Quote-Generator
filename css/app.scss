@@ -78,6 +78,7 @@ main {
         right: -100%;
         text-align: center;
         transition: all 500ms ease;
+        overflow-y: scroll;
 
         .btn {
             margin: 1.5em 0 1em;
