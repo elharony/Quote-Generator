@@ -9,6 +9,7 @@
     <!-- CSS & Fonts -->
     <link rel="stylesheet" href="css/app.css">
     <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 </head>
 <body>
     
@@ -17,16 +18,16 @@
             <h2 id="quote"></h2>
             <p id="author"></p>
             <div class="options">
-                <button class="btn generate-btn" data-value="All">Random Quote</button>
-                <button class="btn generate-btn" data-value="Business">Business</button>
-                <button class="btn generate-btn" data-value="Time">Time</button>
-                <button class="btn generate-btn" data-value="Money">Money</button>
-                <button class="btn" id="show-all">Show All</button>
+                <button class="btn generate-btn" data-value="All" title="Random Quote"><i class="fas fa-random fa-fw"></i></button>
+                <button class="btn generate-btn" data-value="Business" title="Business"><i class="fas fa-briefcase fa-fw"></i></button>
+                <button class="btn generate-btn" data-value="Time" title="Time"><i class="fas fa-clock fa-fw"></i></button>
+                <button class="btn generate-btn" data-value="Money" title="Money"><i class="fas fa-dollar-sign fa-fw"></i></button>
+                <button class="btn" id="show-all" title="Show All"><i class="fas fa-th"></i></button>
             </div>
         </div>
 
         <div class="quotes-wrapper">
-            <button class="btn" onclick="hideGrid()">Go Back</button>
+            <button class="btn" onclick="hideGrid()"><i class="fas fa-chevron-left fa-fw"></i></button>
             <div class="quotes"></div>
         </div>
     </main>
