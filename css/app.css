@@ -118,8 +118,8 @@ main .quotes-wrapper .quotes .quote {
       justify-content: space-around;
   background: #f7f7ff;
   text-align: center;
-  -webkit-box-shadow: 0 10px 60px rgba(69, 74, 253, 0.19);
-          box-shadow: 0 10px 60px rgba(69, 74, 253, 0.19);
+  -webkit-box-shadow: 0 10px 60px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 10px 60px rgba(0, 0, 0, 0.1);
 }
 
 main .quotes-wrapper .quotes .quote h2 {
