@@ -75,6 +75,12 @@ main .inner .options {
   text-align: center;
 }
 
+main .inner .options .quote-counter {
+  color: #f7f7ff;
+  background: #454afd;
+  cursor: default;
+}
+
 main .quotes-wrapper {
   position: absolute;
   width: 100%;

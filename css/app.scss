@@ -67,6 +67,12 @@ main {
             bottom: 2em;
             left: 0;
             text-align: center;
+            
+            .quote-counter {
+                color: $color-white;
+                background: $color-main;
+                cursor: default;
+            }
         }
     }
 
