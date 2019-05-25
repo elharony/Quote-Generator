@@ -132,7 +132,7 @@ displayQuote = (randomQuoteIndex) => {
    /**
     * Change the background
     */
-   main.style.background = `#ffffff url(../img/${selectedQuote.category.toLowerCase()}.jpg) center`
+   main.style.background = `#ffffff url(./img/${selectedQuote.category.toLowerCase()}.jpg) center`
    main.style.backgroundSize = 'cover'
 }
 
